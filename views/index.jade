@@ -1,5 +1,6 @@
 extends layout
 include includes/features.jade
+include includes/reviews.jade
 
 block content
   .content
@@ -21,6 +22,11 @@ block content
       h2
         | Особенности
       +features()
+
+    section
+      h2
+        | Отзывы
+      +reviews()
 
     section
       h2

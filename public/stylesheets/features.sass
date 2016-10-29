@@ -1,15 +1,31 @@
 .feature
-  margin: 20px 0
+  margin: 40px 0
   padding-left: 150px
-  background-position: 40px
-  background-repeat: no-repeat
-  background-size: auto 100%
+  position: relative
 
   &.is-right
-    text-align: right
+    background-position: right 40px center
     padding-left: 0
     padding-right: 150px
-    background-position: right 40px center
+    text-align: right
+
+  &:last-of-type
+    margin-bottom: 0
+
+.feature-icon
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+  position: absolute
+  left: 20px
+  top: 50%
+  transform: translate3d(0, -50%, 0)
+  width: 100px
+  height: 100px
+
+  .is-right &
+    right: 20px
+    left: auto
 
   &.is-story
     background-image: url('~book.svg')
@@ -19,10 +35,6 @@
 
   &.is-arcade
     background-image: url('~gamepad.svg')
-
-  &:last-of-type
-    margin-bottom: 0
-
 
 .feature-title
   font-size: 20px
